@@ -1,0 +1,112 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+
+.rapper {
+  max-width: 60%;
+  margin: 1rem auto;
+}
+
+/* Header Formatting */
+.header-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  margin-bottom: 2em;
+  background-color: aqua;
+}
+button {
+  border: 2px solid black;
+  padding: 1rem;
+  max-width: 120px;
+}
+button:hover{
+    background-color: rgb(85, 85, 75);
+    cursor: pointer;
+    color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.header-split p {
+  text-align: end;
+  padding: 2em;
+}
+
+.number {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 1em;
+  font-size: 30px;
+}
+.guess span {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+/* Main Section Formatting */
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  background-color: blanchedalmond;
+}
+.left {
+  padding: 1em;
+}
+
+/* Left formatting */
+.left p {
+  text-align: center;
+  color: blue;
+}
+.left span {
+  border: 1px solid black;
+  padding: 0.7em;
+  cursor: pointer;
+}
+
+.left span:hover {
+  background-color: rgb(80, 77, 64);
+}
+
+input {
+  width: 90%;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* Rigth Formatting */
+.right {
+  padding: 1em;
+}
+
+.right h2 {
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 11px;
+  }
+  h1 {
+    font-size: 15px;
+  }
+
+  .rapper {
+    max-width: 80%;
+  }
+}
