@@ -7,11 +7,16 @@
 }
 body {
   font-size: 14px;
+  display: relative;
 }
 
 .rapper {
   max-width: 60%;
-  margin: 1rem auto;
+  margin: 3rem auto;
+  z-index: -1;
+  background-image:linear-gradient(to right, rgba(0, 0, 0, 0.8),rgba(0,0,0,.3)), url( myGameBackground.jpg);
+  background-size: contain;
+  background-position: center;
 }
 
 /* Header Formatting */
@@ -27,27 +32,38 @@ button {
   padding: 1rem;
   max-width: 120px;
 }
-button:hover{
-    background-color: rgb(85, 85, 75);
-    cursor: pointer;
-    color: aliceblue;
+button:hover {
+  background-color: rgb(85, 85, 75);
+  cursor: pointer;
+  color: aliceblue;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .header-split p {
   text-align: end;
   padding: 2em;
 }
-
+.hurray{
+  color: white;
+}
+.center {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  /* background-color: brown; */
+  padding: 0.3em;
+}
 .number {
+  /* border: 2px solid black; */
   text-align: center;
-  padding: 1em;
-  margin-bottom: 1em;
+  padding: 0.6em;
+  /* margin-bottom: 1em; */
   font-size: 30px;
+  font-weight: 300;
 }
 .guess span {
   border: 1px solid black;
@@ -64,13 +80,17 @@ main {
   background-color: blanchedalmond;
 }
 .left {
+  display: grid;
+  align-items: center;
+  justify-items: center;
   padding: 1em;
 }
 
 /* Left formatting */
-.left p {
-  text-align: center;
-  color: blue;
+.click {
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 .left span {
   border: 1px solid black;
@@ -80,6 +100,7 @@ main {
 
 .left span:hover {
   background-color: rgb(80, 77, 64);
+  color: #fff;
 }
 
 input {
@@ -97,7 +118,40 @@ input {
 .right h2 {
   margin-bottom: 1em;
 }
+.right p {
+  margin-top: 10px;
+}
 
+.overlay{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  background-color: rgba(41, 38, 38,.4);
+  /* z-index: 1; */
+}
+
+.note{
+  width: 50%;
+  background-color: aliceblue;
+  padding: 3em;
+  line-height: 1.8em;
+}
+.note-btn{
+  position: relative;
+  top: 0;
+  left: 95%;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  
+}
 @media screen and (max-width: 600px) {
   body {
     font-size: 11px;
@@ -105,8 +159,14 @@ input {
   h1 {
     font-size: 15px;
   }
+  .note{
+    width: 80%;
+  }
 
   .rapper {
-    max-width: 80%;
+    max-width: 90%;
+  }
+  .header-split p {
+    text-align: center;
   }
 }
